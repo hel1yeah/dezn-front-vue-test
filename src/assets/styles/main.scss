@@ -1,0 +1,24 @@
+@use './fonts.scss';
+@use './normalize.scss';
+@use '@/assets/styles/_variables.scss' as varsInner;
+
+
+#app {
+  z-index: 1;
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: varsInner.$text-primary;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
