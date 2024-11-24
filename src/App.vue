@@ -2,15 +2,15 @@
 import { RouterLink, RouterView } from 'vue-router'
 
 import TheSidebar from '@/components/TheSidebar.vue'
+import TheHeader from '@/components/TheHeader.vue'
 </script>
 
 <template>
   <div class="container">
     <the-sidebar class="sidebar" />
 
-    <header class="header">
-      <div>Search</div>
-    </header>
+    <the-header class="header" />
+
     <main class="content">
       <RouterView />
     </main>
@@ -51,7 +51,7 @@ import TheSidebar from '@/components/TheSidebar.vue'
   background-color: #fff;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 20px 0 vars.$sidebar-width;
 
   -webkit-box-shadow: 0px 5px 25px -12px rgba(0, 0, 0, 0.77);
   -moz-box-shadow: 0px 5px 25px -12px rgba(0, 0, 0, 0.77);
@@ -61,7 +61,7 @@ import TheSidebar from '@/components/TheSidebar.vue'
 .content {
   grid-area: content;
   background-color: vars.$content-bg-color;
-  padding: 100px 20px 20px 120px;
+  padding: 80px 20px 20px 90px;
   overflow-y: auto;
 }
 </style>
