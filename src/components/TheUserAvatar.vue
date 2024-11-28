@@ -1,12 +1,7 @@
 <script setup lang="ts">
-import {ref, computed} from "vue"
-const isAnimationsEnabled = ref<boolean>(false)
+import { useAnimation } from '@/composables/useAnimation'
 
-const onToggleAnimation = () => {
-  isAnimationsEnabled.value = !isAnimationsEnabled.value
-}
-
-const typeOnAnimation = computed(() => isAnimationsEnabled.value ? 'spin' : null)
+const {typeOnAnimation, onToggleAnimation} = useAnimation()
 
 </script>
 
@@ -16,7 +11,8 @@ const typeOnAnimation = computed(() => isAnimationsEnabled.value ? 'spin' : null
     <RouterLink to="/setting" class="user-avatar__link">
       <v-icon name="fc-settings" scale="1.5" :animation="typeOnAnimation"
       @mouseenter="onToggleAnimation"
-      @mouseleave="onToggleAnimation"/>
+      @mouseleave="onToggleAnimation"
+      />
     </RouterLink />
   </div>
 </template>

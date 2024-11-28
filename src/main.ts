@@ -7,9 +7,9 @@ import App from './App.vue'
 import router from './router'
 
 import { OhVueIcon, addIcons } from 'oh-vue-icons'
-import { FcSettings, IoTimeOutline, WiTime3 } from 'oh-vue-icons/icons'
+import { FcSettings, IoTimeOutline, WiTime3, FcPlus } from 'oh-vue-icons/icons'
 
-addIcons(FcSettings, IoTimeOutline, WiTime3)
+addIcons(FcSettings, IoTimeOutline, WiTime3, FcPlus)
 
 const app = createApp(App)
 app.component('v-icon', OhVueIcon)

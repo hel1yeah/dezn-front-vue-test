@@ -6,13 +6,22 @@ interface Props {
   label?: string | null
 }
 
-const { type = 'text', placeholder = 'Enter text', label = undefined } = defineProps<Props>()
+const {
+  type = 'text',
+  placeholder = 'Enter text',
+  label = undefined,
+} = defineProps<Props>()
 </script>
 
 <template>
   <label class="label">
     <span class="label__text" v-if="label">{{ label }}</span>
-    <input class="label__input" :type="type" :placeholder="placeholder" />
+    <input
+      class="label__input"
+      :type="type"
+      :placeholder="placeholder"
+      name="input"
+    />
   </label>
 </template>
 

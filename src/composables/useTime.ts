@@ -1,7 +1,7 @@
 import { ref, computed } from 'vue'
 import dayjs from 'dayjs'
 
-type format = 'dddd' | 'D MMM, YYYY' | 'HH: mm' | 'DD / MM' | 'DD / MMM / YYYY'
+import type { format } from '@/types/dateFormats'
 
 export function useTime() {
   const interval = ref()
@@ -27,5 +27,12 @@ export function useTime() {
     clearInterval(interval.value)
   }
 
-  return { startTimer, clearTimer, currentDayName, currentDate, currentTime, formatDate }
+  return {
+    startTimer,
+    clearTimer,
+    currentDayName,
+    currentDate,
+    currentTime,
+    formatDate,
+  }
 }

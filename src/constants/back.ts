@@ -1,3 +1,5 @@
+import type { IProduct } from '@/types/IProducts'
+
 const orders = [
   {
     id: 1,
@@ -19,15 +21,19 @@ const orders = [
   },
 ]
 
-const products = [
+export const products: IProduct[] = [
   {
     id: 1,
+    inRepair: true,
+    name: 'Gigabyte Technology X58-USB3 (Socket 1366) 6 X58-USB3 (Socket 1366) 6',
     serialNumber: 1234,
     isNew: 1,
     photo: 'pathToFile.jpg',
     title: 'Product 1',
     type: 'Monitors',
     specification: 'Specification 1',
+    longDescription:
+      'lorem ipsum dolor sit amet, consectetur adip sapiscing elit lorem ipsum dolor sit amet, consectetur adip sapiscing elitlorem ipsum dolor sit amet, consectetur adip sapiscing elitlorem ipsum dolor sit amet, consectetur adip sapiscing elit',
     guarantee: {
       start: '2017-06-29 12:09:33',
       end: '2017-06-29 12:09:33',
@@ -41,12 +47,17 @@ const products = [
   },
   {
     id: 2,
+    inRepair: false,
+    name: 'Gigabyte Technology X58-USB3 (Socket 1366) 6 X58-USB3 (Socket 1366) 6',
     serialNumber: 1234,
     isNew: 1,
     photo: 'pathToFile.jpg',
     title: 'Product 1',
     type: 'Monitors',
+    user: 'Chrystorozhdestvensky Alexander Alexander Alexander',
     specification: 'Specification 1',
+    longDescription:
+      'lorem ipsum dolor sit amet, consectetur adip sapiscing elit lorem ipsum dolor sit amet, consectetur adip sapiscing elitlorem ipsum dolor sit amet, consectetur adip sapiscing elitlorem ipsum dolor sit amet, consectetur adip sapiscing elit',
     guarantee: {
       start: '2017-06-29 12:09:33',
       end: '2017-06-29 12:09:33',
@@ -60,6 +71,8 @@ const products = [
   },
   {
     id: 3,
+    inRepair: true,
+    name: 'MSI - X58-USB3 (Socket 1366) 6 X58-USB3 (Socket 1366) 6 X58 USB3 (Socket 1366) 6',
     serialNumber: 1234,
     isNew: 1,
     photo: 'pathToFile.jpg',
